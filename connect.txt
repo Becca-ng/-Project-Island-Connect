@@ -1,0 +1,19 @@
+Island Connect 
+
+
+app.js
+(node app.js)
+-set up server 
+-set up pages
+-connect to ejs 
+
+
+
+DB
+-make table 
+-user,pw,name,island,bio,fruit,music 
+-make a tester user 
+(Tester Password1)
+
+
+https://stackoverflow.com/questions/37300997/multi-row-insert-with-pg-promise

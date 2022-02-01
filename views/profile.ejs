@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+<header>
+    <link rel="stylesheet" href="/profile.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</header>
+
+<div class="sidebar">
+    <div id='profile'>
+        <h1 id='cardTitle'>Your Profile Card!</h1>
+
+        <img class = 'icon' src="/icons/<%=userData.icon%>.png">
+
+        
+        <div class="profile_grid">
+            <div class="grid-item">Name:<%= userData.name %> </h1> </div><br> 
+            <div class="grid-item">Island: <%= userData.island_name%></div><br> 
+            <div class="grid-item">Switch Code: <%= userData.code%></div><br> 
+            <div class="grid-item">Island Fruit:<img class = 'fruit_icon' src = '/fruit/<%= userData.fruit%>.png'></div><br> 
+            <div class="grid-item">Bio: <%= userData.bio%></div><br> 
+        </div>
+
+        <div class='profile_buttons'>
+            <button id='proButton'>Edit Bio</button>
+            <button id='proButton'>Log Out</button>
+            <button id='proButton'>Delete Profile</button>
+            <script>
+                
+            </script>
+        </div>
+    </div>
+</div>
+
+<body>
+
+    <div class="tab">
+        <script>
+            function searchBG() {
+                document.body.style.backgroundImage = "url('fruit.png')";
+            }
+
+            function bgChange(color) {
+                document.body.style.background = color;
+            }
+        </script>
+
+        <button class="tablinks" onclick='searchBG()'>Search All</button>
+        <button class="tablinks" id='appleTab' onclick="bgChange('#fd9f91')">Apple</button>
+        <button class="tablinks" id='cherryTab' onclick="bgChange('#c5b5d4')">Cherry</button>
+        <button class="tablinks" id='orangeTab' onclick="bgChange('#fdd591')">Orange</button>
+        <button class="tablinks" id='pearTab' onclick="bgChange('#aaf2d1')">Pear</button>
+        <button class="tablinks" id='peachTab' onclick="bgChange('#ffecb7')">Peach</button>
+        <form class="search">
+            <input type="search" id="query" name="q" placeholder="Search...">
+            <button>Search</button>
+        </form>
+    </div>
+    <div class="container" id = 'displayCard'> 
+        <% for(let user of publicData) { %>
+            <div class="card">
+                <img src="/icons/<%=user.icon%>.png" style="width:100%">
+                <h1><%=user.name%></h1>
+                <p class='<%=user.fruit %>''><%= user.fruit %></p>
+                <p class="swCode"><%=user.code%></p>
+            </div>
+        <% } %>
+        </div>
+</body>
+
+
+
+<script>
+function removeAll() {
+    let previousImages = document.querySelectorAll('.card');
+    previousImages.forEach(
+        image => image.remove()
+    );
+};
+
+function addAll() {
+    let container = document.querySelectorAll('.container');
+    container.setInnerHTML('<% for(let user of publicData) { %> <div class="card"><img src="<%=user.icon%>.png" style="width:100%"><h1><%=user.name%></h1><p><%= user.fruit %></p> <p class="swCode"><%=user.code%></p></div><% } %>')
+};
+</script> 
+
+<button onClick='addAll'>fuyck</button>
+
+</body>
+</html>

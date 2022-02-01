@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html>
+<header>
+    <link rel="stylesheet" href="/index.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</header>
+
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form class='form-container' id='card_form' action='/create'>
+            <h1 class='create_header'>Create your Card!</h1>
+
+            <label for='create_name'> Name: </label>
+            <input name='create_name' type="text" placeholder="You will use this to sign in!" />
+
+            <label for='password'>Password: </label>
+            <input name='create_password' type='password' id='create_password' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}"
+                placeholder="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 letters!" />
+
+            <label for='island'> Island Name: </label>
+            <input type='text' id='island' pattern=".{1,10}" name='create_island' placeholder='Limit 10 characters'>
+
+            <label for='code'> What is your Switch Friend Code? </label>
+            <input type='text' id='code' name='sw_code'>
+
+            <label for='bio'> Bio </label><br>
+            <textarea form='card_form' id='create_bio' name='create_bio' maxlength="150"
+                placeholder='150 character length'></textarea><br>
+
+
+            <p id='fruit_header'> Choose your Island fruit! </p>
+
+            <div class='fruit_img' id='fruit_bg'>
+
+                <label for='apple'>
+                    <input type='radio' id='apple' name='fruit' value='apple'>
+                    <img id='fruit_img' src='fruit/Apple.png'>
+                </label>
+
+
+                <label for='cherry'>
+                    <input type='radio' id='cherry' name='fruit' value='cherry'>
+                    <img id='fruit_img' src='fruit/Cherry.png'>
+                </label>
+
+
+                <label for='orange'>
+                    <input type='radio' id='orange' name='fruit' value='orange'>
+                    <img id='fruit_img' src='fruit/Orange.png'>
+                </label>
+
+
+                <label for='pear'>
+                    <input type='radio' id='pear' name='fruit' value='pear'>
+                    <img id='fruit_img' src='fruit/Pear.png'>
+                </label>
+
+                <label for='peach'>
+                    <input type='radio' id='peach' name='fruit' value='peach'>
+                    <img id='fruit_img' src='fruit/Peach.png'>
+                </label><br>
+            </div>
+
+            <p id='icon_header'> Choose your Icon! </p>
+            <div id='icon_selector' class='icon_selector'>
+
+                <label class='icon' for='icon1'>
+                    <input type='radio' id='icon1' name='icon' value='icon1'>
+                    <img id='icon_img' src='icons/icon1.png'>
+                </label>
+
+                <label class='icon' for='icon2'>
+                    <input type='radio' id='icon2' name='icon' value='icon2'>
+                    <img id='icon_img' src='icons/icon2.png'>
+                </label>
+
+
+                <label class='icon' for='icon3'>
+                    <input type='radio' id='icon3' name='icon' value='icon3'>
+                    <img id='icon_img' src='icons/icon3.png'>
+                </label>
+
+                <label class='icon' for='icon4'>
+                    <input type='radio' id='icon4' namez='icon' value='icon4'>
+                    <img id='icon_img' src='icons/icon4.png'>
+                </label>
+
+                <br>
+
+                 <label class='icon' for='icon5'>
+                    <input type='radio' id='icon5' name='icon' value='icon5'>
+                    <img id='icon_img' src='icons/icon5.png'>
+                </label>
+                
+                <label class='icon' for='icon6'>
+                    <input type='radio' id='icon6' name='icon' value='icon6'>
+                    <img id='icon_img' src='icons/icon6.png'>
+                </label>   
+
+                <label class='icon' for='icon7'>
+                    <input type='radio' id='icon7' name='icon' value='icon7'>
+                    <img id='icon_img' src='icons/icon7.png'>
+                </label>   
+
+                <label class='icon' for='icon8'>
+                    <input type='radio' id='icon8' name='icon' value='icon8'>
+                    <img id='icon_img' src='icons/icon8.png'>
+                </label> 
+
+                <br>
+
+                <label class='icon' for='icon9'>
+                    <input type='radio' id='icon9' name='icon' value='icon9'>
+                    <img id='icon_img' src='icons/icon9.png'>
+                </label>
+                
+                <label class='icon' for='icon10'>
+                    <input type='radio' id='icon10' name='icon' value='icon10'>
+                    <img id='icon_img' src='icons/icon10.png'>
+                </label>   
+
+                <label class='icon' for='icon11'>
+                    <input type='radio' id='icon11' name='icon' value='icon11'>
+                    <img id='icon_img' src='icons/icon11.png'>
+                </label>   
+
+                <label class='icon' for='icon12'>
+                    <input type='radio' id='icon12' name='icon' value='icon12'>
+                    <img id='icon_img' src='icons/icon12.png'>
+                </label> 
+
+                <br>
+
+                <label class='icon' for='icon13'>
+                    <input type='radio' id='icon13' name='icon' value='icon13'>
+                    <img id='icon_img' src='icons/icon13.png'>
+                </label>   
+
+                <label class='icon' for='icon14'>
+                    <input type='radio' id='icon14' name='icon' value='icon14'>
+                    <img id='icon_img' src='icons/icon14.png'>
+                </label>   
+
+                <label class='icon' for='icon15'>
+                    <input type='radio' id='icon15' name='icon' value='icon15'>
+                    <img id='icon_img' src='icons/icon15.png'>
+                </label>  
+
+                <label class='icon' for='icon16'>
+                    <input type='radio' id='icon16' name='icon' value='icon16'>
+                    <img id='icon_img' src='icons/icon16.png'>
+                </label>  
+
+            </div>
+
+            <button>Sign Up</button>
+        </form>
+    </div>
+
+    <div class="form-container sign-in-container">
+        <form action="/profile/auth" id='login' method="POST">
+            <h1>Sign in!</h1>
+            <input name="name" type="text" placeholder="Name" />
+            <input name="password" type="password" placeholder="Password" />
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>Sign in to see your card!</p>
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Hello!</h1>
+                <p>Don't have a card? Create one!</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+</script>
+
+
+</html>
+
+
+
+

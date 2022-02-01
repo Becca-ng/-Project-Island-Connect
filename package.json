@@ -1,0 +1,41 @@
+{
+  "name": "connect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-validator": "^6.14.0",
+    "multer": "^1.4.4",
+    "pg": "^8.7.1",
+    "pg-promise": "^10.11.1",
+    "sequelize": "^6.14.0",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "sequelize-cli": "^6.4.1"
+  },
+  "scripts": {
+    "db:create": "createdb connect",
+    "db:destroy": "dropdb connect",
+    "db:init": "psql -f schema.sql connect",
+    "db:seed": "psql -f seed.sql connect",
+    "db:reset": "npm run db:destroy; npm run db:create && npm run db:init && npm run db:seed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Becca-ng/connect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Becca-ng/connect/issues"
+  },
+  "homepage": "https://github.com/Becca-ng/connect#readme"
+}

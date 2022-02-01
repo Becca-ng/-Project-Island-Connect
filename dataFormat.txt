@@ -1,0 +1,10 @@
+{
+  display_name: 'Becca',
+  name: 'BECCA',
+  password: '$2b$10$/qLJx/YRKOx6GV1lQGO/9uC/pa.a8aRfUFGC3dZeIudst1BFCCGz2',
+  island_name: 'Kitsune',
+  fruit: 'peach',
+  code: '999999999',
+  bio: 'This is a bio',
+  icon: 'icon11'
+}
